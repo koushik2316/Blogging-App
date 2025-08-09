@@ -100,14 +100,15 @@
 	</build>
 	
 	<distributionManagement>
-        <repository>
-            <id>maven-snapshots</id>
-            <url>http://13.127.253.31:8081/repository/maven-snapshots/</url>
-        </repository>
-        <snapshotRepository>
-            <id>maven-releases</id>
-            <url>http://13.127.253.31:8081/repository/maven-releases/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <repository>
+        <id>maven-releases</id> <!-- ✅ For non-SNAPSHOT versions -->
+        <url>http://13.127.253.31:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+        <id>maven-snapshots</id> <!-- ✅ For -SNAPSHOT versions -->
+        <url>http://13.127.253.31:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+
 
 </project>
