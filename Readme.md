@@ -31,6 +31,7 @@ This project demonstrates modern **DevSecOps** practices and integrates **CI/CD,
 | CI/CD         | Jenkins, Nexus, SonarQube                   |
 | Security      | Trivy (image scanning), Role-based access  |
 | Container     | Docker, Private Docker Registry (in-cluster)|
+|Orchestration	| Kubernetes (EKS)                            |
 | Monitoring    | Prometheus, Grafana, Blackbox Exporter      |
 
 ---
@@ -38,8 +39,8 @@ This project demonstrates modern **DevSecOps** practices and integrates **CI/CD,
 ## Dashboard Screenshots
 
 
- ![Image](screenshots/Screenshot 2025-08-10 144526.png)
+ ![Image](screenshots/Screenshot%202025-08-10%20144526.png)
 
 ## Screenshot
 
- ![Image](screenshots/Screenshot 2025-08-10 144548.png)
+ ![Image](screenshots/Screenshot%202025-08-10%20145027.png)
