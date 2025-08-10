@@ -84,31 +84,31 @@ This will create the EKS cluster, networking, IAM roles, and other infrastructur
 ---
 
 ### 🔄 CI/CD Pipeline
-Jenkinsfile defines stages for building, testing, scanning (Trivy), and deploying images.
+- Jenkinsfile defines stages for building, testing, scanning (Trivy), and deploying images.
 
-Automated triggers on Git commits.
+- Automated triggers on Git commits.
 
-Artifacts published to Nexus repository.
+- Artifacts published to Nexus repository.
 
-Container images pushed to the private Docker registry.
+- Container images pushed to the private Docker registry.
 
 ---
 
 ### 🔐 Security
-Role-based access control implemented at the application level.
+> Role-based access control implemented at the application level.
 
-Image vulnerability scanning done by Trivy during the CI pipeline.
+> Image vulnerability scanning done by Trivy during the CI pipeline.
 
-Secrets managed securely within Kubernetes.
+> Secrets managed securely within Kubernetes.
 
 ---
 
 ### 📊 Monitoring
-Prometheus collects metrics from app and cluster.
+- Prometheus collects metrics from app and cluster.
 
-Grafana dashboards visualize application and infrastructure health.
+- Grafana dashboards visualize application and infrastructure health.
 
-Blackbox Exporter monitors endpoint availability.
+- Blackbox Exporter monitors endpoint availability.
 
 ---
 
