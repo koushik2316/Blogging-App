@@ -59,7 +59,7 @@ Blogging App allows users to create, edit, and manage blog posts with role-based
    git clone https://github.com/koushik2316/Blogging-App.git
    cd Blogging-App
 
-2.  Navigate to the EKS Terraform directory:
+2. Navigate to the EKS Terraform directory:
 
    ```bash
    cd EKS_Terraform
