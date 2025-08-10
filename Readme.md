@@ -59,7 +59,7 @@ Blogging App allows users to create, edit, and manage blog posts with role-based
    git clone https://github.com/koushik2316/Blogging-App.git
    cd Blogging-App
 
-2. Configure AWS credentials and update terraform/variables.tf with your region, key names, etc.
+2. Configure AWS credentials and update `terraform/variables.tf` with your region, key names, etc.
 
 3. Navigate to the EKS Terraform directory:
 
@@ -83,6 +83,23 @@ This will create the EKS cluster, networking, IAM roles, and other infrastructur
 
 ---
 
+### Build and Push Docker Images
+```
+mvn clean package
+docker build -t your-private-registry/blogging-app:latest .
+docker push your-private-registry/blogging-app:latest
+```
+
+---
+
+### Deploy to Kubernetes
+```
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+```
+
+---
+
 ### 🔄 CI/CD Pipeline
 - Jenkinsfile defines stages for building, testing, scanning (Trivy), and deploying images.
 
@@ -95,11 +112,11 @@ This will create the EKS cluster, networking, IAM roles, and other infrastructur
 ---
 
 ### 🔐 Security
-> Role-based access control implemented at the application level.
+- Role-based access control implemented at the application level.
 
-> Image vulnerability scanning done by Trivy during the CI pipeline.
+- Image vulnerability scanning done by Trivy during the CI pipeline.
 
-> Secrets managed securely within Kubernetes.
+- Secrets managed securely within Kubernetes.
 
 ---
 
