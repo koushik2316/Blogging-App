@@ -1,6 +1,8 @@
-# 📰 FullStack Blogging App
+# 📝 Blogging App
 
-A complete production-ready full-stack blogging application built using Java (Spring Boot), Maven, and deployed on AWS EKS using Terraform. This project follows modern DevSecOps practices using tools like Jenkins, SonarQube, Trivy, Nexus, and a private Docker registry.
+A complete, production-ready **full-stack blogging application** built using **Java (Spring Boot)** and **Maven**, deployed on **AWS EKS using Terraform**.
+
+This project demonstrates modern **DevSecOps** practices and integrates **CI/CD, security scanning, containerization**, and **observability** tools for enterprise-grade operations.
 
 ---
 
@@ -15,23 +17,29 @@ A complete production-ready full-stack blogging application built using Java (Sp
 - 🐳 Image management in a **private Docker registry**
 - 🔄 CI/CD with **Jenkins**
 - ☁️ Infrastructure provisioning via **Terraform on AWS EKS**
+- ☸️ **Kubernetes-native** deployment using YAML
+- 📈 Monitoring and alerting with **Prometheus, Grafana, and Blackbox Exporter**
 
 ---
 
-## 🧰 Tech Stack
+## 🏗️ Tech Stack
 
-| Layer           | Technology                        |
-|----------------|------------------------------------|
-| **Backend**     | Java, Spring Boot                 |
-| **Build Tool**  | Maven                             |
-| **Database**    | MySQL / H2 (for dev)              |
-| **CI/CD**       | Jenkins, Maven                    |
-| **Security**    | Trivy, SonarQube                  |
-| **Artifact Repo** | Nexus                           |
-| **Docker Registry** | Private Docker registry       |
-| **Containerization** | Docker                       |
-| **Orchestration** | Kubernetes (EKS)                |
-| **Infra as Code** | Terraform                       |
+| Layer         | Tools & Technologies                        |
+|---------------|---------------------------------------------|
+| Backend       | Java, Spring Boot, Maven                    |
+| Infrastructure| Terraform, AWS EKS, VPC, IAM                |
+| CI/CD         | Jenkins, Nexus, SonarQube                   |
+| Security      | Trivy (image scanning), Role-based access  |
+| Container     | Docker, Private Docker Registry (in-cluster)|
+| Monitoring    | Prometheus, Grafana, Blackbox Exporter      |
 
 ---
 
+## Dashboard Screenshots
+
+
+ ![Image](screenshots/Screenshot 2025-08-10 144526.png)
+
+## Screenshot
+
+ ![Image](screenshots/Screenshot 2025-08-10 144548.png)

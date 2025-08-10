@@ -21,10 +21,11 @@ data "aws_availability_zones" "available" {}
 
 # Subnets
 resource "aws_subnet" "eks_subnet" {
-  count             = 2
-  vpc_id            = aws_vpc.eks_vpc.id
-  cidr_block        = cidrsubnet(aws_vpc.eks_vpc.cidr_block, 8, count.index)
-  availability_zone = element(data.aws_availability_zones.available.names, count.index)
+  count                   = 2
+  vpc_id                  = aws_vpc.eks_vpc.id
+  cidr_block              = cidrsubnet(aws_vpc.eks_vpc.cidr_block, 8, count.index)
+  availability_zone       = element(data.aws_availability_zones.available.names, count.index)
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "eks-subnet-${count.index}"
@@ -138,7 +139,8 @@ resource "aws_eks_node_group" "my_eks_node_group" {
 
   depends_on = [
     aws_iam_role_policy_attachment.eks_node_AmazonEKSWorkerNodePolicy,
-    aws_iam_role_policy_attachment.eks_node_AmazonEC2ContainerRegistryReadOnly
+    aws_iam_role_policy_attachment.eks_node_AmazonEC2ContainerRegistryReadOnly,
+    aws_iam_role_policy_attachment.eks_node_AmazonEKS_CNI_Policy
   ]
 }
 
@@ -170,7 +172,7 @@ resource "aws_iam_role" "eks_node_role" {
       {
         Effect = "Allow"
         Principal = {
-          Service = "eks.amazonaws.com"
+          Service = "ec2.amazonaws.com"
         }
         Action = "sts:AssumeRole"
       }
